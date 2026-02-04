@@ -9,7 +9,6 @@ import android.Manifest
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 
-
 class MainActivity : ComponentActivity() {
     private val cameraPermission = Manifest.permission.CAMERA
     private val requestPermissionLauncher = registerForActivityResult(
@@ -20,8 +19,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
 
         setContent {
             requestPermissionLauncher.launch(cameraPermission)

@@ -36,6 +36,11 @@ data class ColorPalette(
     val border: Color,
     val primary: Color,
     val secondary: Color,
+    val warning: Color = Color(0xEED2023B),  // Yellow for warnings ⚠️
+    val error: Color = Color(0xFFC62828),  // Dark Red for errors 💣
+    val success: Color = Color(0xFF388E3C),  // Green for success 🎉
+    val info: Color = Color(0xFF1976D2),  // Blue for info ℹ️
+
 )
 
 val LocalAppColors: ProvidableCompositionLocal<ColorPalette> = compositionLocalOf { LightColors }
